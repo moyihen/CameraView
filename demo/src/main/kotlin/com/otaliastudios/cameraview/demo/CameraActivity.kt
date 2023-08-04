@@ -45,6 +45,8 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener, OptionView.Cal
         CameraLogger.setLogLevel(CameraLogger.LEVEL_VERBOSE)
         camera.setLifecycleOwner(this)
         camera.addCameraListener(Listener())
+        //camera.facing =Facing.BACK;
+
         if (USE_FRAME_PROCESSOR) {
             camera.addFrameProcessor(object : FrameProcessor {
                 private var lastTime = System.currentTimeMillis()
